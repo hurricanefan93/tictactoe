@@ -15,6 +15,8 @@ const turnLine = document.querySelector('.turnLine')
 let currentTurn = 'X'
 const possibleWays = [[td1, td2, td3], [td4, td5, td6], [td7, td8, td9], [td1, td4, td7], [td2, td5, td8], [td3, td6, td9], [td1, td5, td9], [td3, td5, td7]]
 const modal = document.querySelector('body')
+const modalContent = document.querySelector('h3')
+let draw = 0
 
 for (let i = 0; i < anySquare.length; i++) {
   anySquare[i].addEventListener('click', () => {
@@ -33,22 +35,33 @@ for (let i = 0; i < anySquare.length; i++) {
     }
 
     if (!someOneWon) {
+      draw++
       if (currentTurn === 'X') {
         currentTurn = 'O'
-        turnLine.textContent = "it's O's turn!"
+        turnLine.textContent = "It's Rick's turn!"
       } else {
         currentTurn = 'X'
-        turnLine.textContent = "it's X's turn!"
+        turnLine.textContent = "it's Morty's turn!"
       }
+    }
+    if (draw >= 9) {
+      modal.className = 'modal'
+      modalContent.textContent = "It's a tie"
     }
   })
 }
 
-const button = document.querySelector('button')
+const restart = document.querySelector('button.restart')
+restart.addEventListener('click', () => {
+  window.location.reload()
+})
+
+const button = document.querySelector('button.playAgain')
 button.addEventListener('click', () => {
   modal.className = ''
   window.location.reload()
 })
+
 const main = () => {}
 document.addEventListener('DOMContentLoaded', main)
 

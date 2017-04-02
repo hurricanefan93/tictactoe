@@ -4,6 +4,8 @@ $base-text-size: 16px;
 $base-font-family: sans-serif;
 
 html {
+  background: url(http://i.imgur.com/B31Uwkm.png) no-repeat center center fixed;
+  background-size: cover;
   text-size-adjust: 100%;
 }
 
@@ -15,7 +17,12 @@ body {
   @include font-smoothing(on);
 }
 
+.turnLine {
+  font-size: 30px;
+}
+
 table {
+  margin-top: 110px;
   margin-left: auto;
   margin-right: auto;
   width: 551px;
@@ -26,10 +33,10 @@ table {
     width: 175px;
     text-align: center;
     font-size: 120px;
-    color: rgba(229, 103, 255, 0.85);
+    color: rgb(255, 255, 255);
     border: 2px solid rgba(200, 200, 200, 0.4);
-    border-radius: 5px;
-    background-color: rgba(173, 4, 242, 0.79);
+    border-radius: 100px;
+    background-color: rgba(255, 122, 0, 0.7);
   }
 }
 
@@ -38,14 +45,6 @@ table {
   padding: 0 10px 10px;
   width: 511px;
   text-align: left;
-}
-
-#players .div {
-  display: inline-block;
-  padding-right: 25px;
-  margin: 10px 10px 0 50px;
-  color: #666;
-  transition-duration: 200;
 }
 
 .overlay {
@@ -69,14 +68,24 @@ body.modal main {
 }
 
 .dialog {
-  background-color: white;
+  background-color: rgba(81, 203, 181, 0.84);
   padding: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 20px #333;
+  box-shadow: 0 0 px #333;
+  border-radius: 10px;
 }
 
 footer {
   margin-top: 15px;
+
+  button {
+    height: 50px;
+    background-color: rgba(255, 122, 0, 0.64);
+    border-radius: 10px;
+    border-style: double;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+  }
 }
