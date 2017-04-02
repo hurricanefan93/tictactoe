@@ -41,7 +41,7 @@ for (let i = 0; i < anySquare.length; i++) {
         turnLine.textContent = "It's Rick's turn!"
       } else {
         currentTurn = 'X'
-        turnLine.textContent = "it's Morty's turn!"
+        turnLine.textContent = "It's Morty's turn!"
       }
     }
     if (draw >= 9) {
